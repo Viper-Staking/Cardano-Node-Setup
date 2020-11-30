@@ -4,7 +4,7 @@
 #   1 - command prefix: Path to cardano-node executable or 'docker run' command [default: cardano-node]
 #   2 - base path: Path containing cardano-node directory
 #   3 - node mode: Node operation mode, "relay" or "pool" [default: relay]
-#   4 - node port [default: 4444]
+#   4 - node port [default: 3001]
 #   5 - host address [default: 0.0.0.0]
 
 if [ $# -ge 1 ]; then
@@ -28,7 +28,7 @@ fi
 if [ $# -ge 4 ]; then
   CNODE_PORT=$4
 else
-  CNODE_PORT=4444
+  CNODE_PORT=3001
 fi
 
 if [ $# -ge 5 ]; then

@@ -2,9 +2,10 @@ BASELINK="https://hydra.iohk.io/job/Cardano/iohk-nix/cardano-deployment/latest-f
 
 # Shelley Testnet
 #echo "Downloading shelley_testnet files..."
-#curl -sSL ${BASELINK}shelley_testnet-config.json -o config/shelley_testnet-config.json
-#curl -sSL ${BASELINK}shelley_testnet-shelley-genesis.json -o config/shelley_testnet-shelley-genesis.json
-#curl -sSL ${BASELINK}shelley_testnet-topology.json -o config/shelley_testnet-topology.json
+#curl -sSL ${BASELINK}testnet-config.json -o config/config.json
+#curl -sSL ${BASELINK}testnet-shelley-genesis.json -o config/testnet-shelley-genesis.json
+#curl -sSL ${BASELINK}testnet-byron-genesis.json -o config/testnet-byron-genesis.json
+#curl -sSL ${BASELINK}testnet-topology.json -o config/topology.json
 
 # Mainnet Candidate
 #echo "Downloading mainnet_candidate files..."

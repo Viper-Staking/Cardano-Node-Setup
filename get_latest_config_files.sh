@@ -1,4 +1,7 @@
-BASELINK="https://hydra.iohk.io/job/Cardano/iohk-nix/cardano-deployment/latest-finished/download/1/"
+BASELINK="https://hydra.iohk.io/job/Cardano/cardano-node/cardano-deployment/latest-finished/download/1/"
+
+echo "Saving config files to ${PWD}/config"
+mkdir -p config
 
 # Shelley Testnet
 #echo "Downloading shelley_testnet files..."
@@ -16,7 +19,7 @@ BASELINK="https://hydra.iohk.io/job/Cardano/iohk-nix/cardano-deployment/latest-f
 
 # # Mainnet
 echo "Downloading mainnet files..."
-curl -sSL ${BASELINK}mainnet-config.json -o config/config.json
-curl -sSL ${BASELINK}mainnet-shelley-genesis.json -o config/mainnet-shelley-genesis.json
-curl -sSL ${BASELINK}mainnet-byron-genesis.json -o config/mainnet-byron-genesis.json
-curl -sSL ${BASELINK}mainnet-topology.json -o config/topology.json
+curl -sSL ${BASELINK}mainnet-config.json > config/config.json
+curl -sSL ${BASELINK}mainnet-byron-genesis.json > config/mainnet-byron-genesis.json
+curl -sSL ${BASELINK}mainnet-shelley-genesis.json > config/mainnet-shelley-genesis.json
+curl -sSL ${BASELINK}mainnet-topology.json > config/topology.json

@@ -4,11 +4,11 @@ echo "Saving config files to ${PWD}/config"
 mkdir -p config
 
 # Shelley Testnet
-#echo "Downloading shelley_testnet files..."
-#curl -sSL ${BASELINK}testnet-config.json -o config/config.json
-#curl -sSL ${BASELINK}testnet-shelley-genesis.json -o config/testnet-shelley-genesis.json
-#curl -sSL ${BASELINK}testnet-byron-genesis.json -o config/testnet-byron-genesis.json
-#curl -sSL ${BASELINK}testnet-topology.json -o config/topology.json
+echo "Downloading shelley_testnet files..."
+curl -sSL ${BASELINK}testnet-config.json -o config/testnet-config.json
+curl -sSL ${BASELINK}testnet-shelley-genesis.json -o config/testnet-shelley-genesis.json
+curl -sSL ${BASELINK}testnet-byron-genesis.json -o config/testnet-byron-genesis.json
+curl -sSL ${BASELINK}testnet-topology.json -o config/testnet-topology.json
 
 # Mainnet Candidate
 #echo "Downloading mainnet_candidate files..."
